@@ -4,7 +4,7 @@ session_start();
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "kliket_satu";
+$database = "uapwaeb";
 
 $conn = mysqli_connect($host, $user, $password, $database);
 
