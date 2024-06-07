@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result) {
         if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
-            $stored_password = $row['password'];
+            $stored_password = $row['passwords'];
             $storedid = $row['id'];
 
             if ($password === $stored_password) {
