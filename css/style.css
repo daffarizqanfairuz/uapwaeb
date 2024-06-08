@@ -1,5 +1,5 @@
 body{
-    background-color: #fcaeae;
+    background-color: #3ABEF9;
     height: 100%;
 }
 form{
@@ -8,9 +8,12 @@ form{
     padding-top: 150px;
 }    
 .bg{
-    background-color: #ffeadd;
+    background-color: #A7E6FF;
 }
 .btn-color{
-    background-color: #ff6666;
+    background-color: #3572EF;
     border: none;
+}
+.nav-link{
+    margin-right: 10px;
 }
