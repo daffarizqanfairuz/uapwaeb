@@ -2,10 +2,10 @@
 include '../db/koneksi.php';
 
 $platform = isset($_GET['platform']) ? $_GET['platform'] : 'pc';
-
 $selected_genre = isset($_GET['genre']) ? $_GET['genre'] : 'action';
 
 $query_platform = $conn->prepare("SELECT id FROM platform WHERE nama = ?");
+
 $query_platform->bind_param('s', $platform);
 $query_platform->execute();
 $result_platform = $query_platform->get_result();
@@ -19,10 +19,11 @@ if ($result_platform->num_rows > 0) {
 $query_genre = "SELECT * FROM genre";
 $result_genre = mysqli_query($conn, $query_genre);
 
-$query_game = "SELECT game.nama as game_name, game.deskripsi, genre.nama as genre_name 
+$query_game = "SELECT game.gameID , game.nama as game_name, game.deskripsi, genre.nama as genre_name 
                FROM game 
                JOIN genre ON game.genreID = genre.genreID 
                WHERE game.platformID = ? AND genre.nama = ?";
+
 $stmt_game = $conn->prepare($query_game);
 $stmt_game->bind_param('is', $platformID, $selected_genre);
 $stmt_game->execute();
@@ -39,7 +40,9 @@ $result_game = $stmt_game->get_result();
 </head>
 <body>
 
-    <?php include 'navbar.php'; ?>
+    <?php 
+    include 'navbar.php'; 
+    ?>
     
     <div class="genre-container">
         <div class="genre-box">
@@ -58,8 +61,10 @@ $result_game = $stmt_game->get_result();
                     <?php if ($result_game->num_rows > 0) { ?>
                         <?php while($row_game = mysqli_fetch_assoc($result_game)) { ?>
                             <div class="table-row">
+                                <a class="riz" href="detail.php?gameID=<?php echo $row_game['gameID']; ?>">
                                 <div class="table-cell game-name table-click"><?php echo $row_game['game_name']; ?></div>
                                 <div class="table-cell table-click"><?php echo $row_game['deskripsi']; ?></div>
+                                </a>
                             </div>
                         <?php } ?>
                     <?php } else { ?>

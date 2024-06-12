@@ -99,3 +99,11 @@ body {
 .space {
     margin-top: 20px;
 }
+
+.riz {
+    text-decoration: none;
+}
+
+.hide {
+    display: none;
+}
