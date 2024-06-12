@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: ../ui/login.html");
+header("Location: ../ui/index.php");
 exit();
 ?>

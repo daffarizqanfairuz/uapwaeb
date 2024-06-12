@@ -60,11 +60,9 @@ $result_game = $stmt_game->get_result();
                 <div class="table">
                     <?php if ($result_game->num_rows > 0) { ?>
                         <?php while($row_game = mysqli_fetch_assoc($result_game)) { ?>
-                            <div class="table-row">
-                                <a class="riz" href="detail.php?gameID=<?php echo $row_game['gameID']; ?>">
+                            <div class="table-row" onclick="window.location.href='detail.php?gameID=<?php echo $row_game['gameID']; ?>'">
                                 <div class="table-cell game-name table-click"><?php echo $row_game['game_name']; ?></div>
                                 <div class="table-cell table-click"><?php echo $row_game['deskripsi']; ?></div>
-                                </a>
                             </div>
                         <?php } ?>
                     <?php } else { ?>

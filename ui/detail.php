@@ -35,7 +35,7 @@ $row_game = mysqli_fetch_assoc($result_game);
     <div class="container mt-5 pt-5">
         <div class="row mt-3">
             <div class="col">
-                <a href="game.php" class="riz"><i class="fa-solid fa-chevron-left"></i></a> Details
+                <a href="game.php" class="riz"><i class="fa-solid fa-chevron-left"></i> Details</a>
             </div>
         </div>
         <div class="row mt-4">

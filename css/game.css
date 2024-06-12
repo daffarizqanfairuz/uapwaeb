@@ -66,12 +66,12 @@ body {
 
 .table-row {
     display: table-row;
+    border-bottom: 1px solid #ddd;
 }
 
 .table-cell {
     display: table-cell;
     padding: 8px;
-    border-bottom: 1px solid #ddd;
     vertical-align: top;
 }
 
