@@ -1,0 +1,101 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    display: grid;
+}
+.starter-template {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+.bg{
+    background-color: #3572EF;
+}
+.btn{
+    background-color: #3ABEF9;
+}
+
+.genre-container {
+    place-self: center;
+    width: 90%;
+    max-width: 1000px;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+.genre-box {
+    display: flex;
+}
+.genre-item {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+}
+.genre-item:hover {
+    background-color: #f0f0f0;
+}
+.genre-item.active {
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+.block {
+    display: block;
+    width: 90%;
+    margin: auto;
+    padding: 0;
+}
+
+.table {
+    display: table;
+    border-collapse: collapse;
+}
+
+.w-full {
+    width: 90%;
+}
+
+.top-1{
+    margin-top: -10%;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.table-click {
+    cursor: pointer;
+}
+
+.game-name {
+    width: 150px;
+    height: 50px;
+}
+
+.game-desc {
+    min-width: auto;
+    max-width: 80%;
+    min-height: auto;
+    max-height: 80%;
+}
+
+.header .table-cell {
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+
+.space {
+    margin-top: 20px;
+}

@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if ($password === $stored_password) {
                 $_SESSION['username'] = $username;
                 $_SESSION['userID'] = $storedid;
-                header("Location: ../ui/index.html"); // Sementara html 
+                header("Location: ../ui/index.php"); 
             } else {
                 $_SESSION['login_error'] = "Password salah";
                 mysqli_free_result($result);
