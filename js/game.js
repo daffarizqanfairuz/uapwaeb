@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     console.log("Script game.js sudah termuat");
     const urlParams = new URLSearchParams(window.location.search);
     const genreItems = document.querySelectorAll('.genre-item');
-    let selectedGenre = urlParams.get('genre') || 'action';
+    let selectedGenre = urlParams.get('genre') || 'Action';
 
     genreItems.forEach(item => {
         if (item.getAttribute('data-genre') === selectedGenre) {

@@ -23,9 +23,9 @@
               Kategori Game
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="game.php?platform=pc&genre=action">PC</a></li>
-              <li><a class="dropdown-item" href="game.php?platform=mobile&genre=action">Mobile</a></li>
-              <li><a class="dropdown-item" href="game.php?platform=console&genre=action">Console</a></li>
+              <li><a class="dropdown-item" href="game.php?platform=pc&genre=Action">PC</a></li>
+              <li><a class="dropdown-item" href="game.php?platform=mobile&genre=Action">Mobile</a></li>
+              <li><a class="dropdown-item" href="game.php?platform=console&genre=Action">Console</a></li>
             </ul>
         </div>
       </li>
