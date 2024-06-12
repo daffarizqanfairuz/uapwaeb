@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2024 at 05:42 PM
+-- Generation Time: Jun 12, 2024 at 07:54 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -30,17 +30,19 @@ SET time_zone = "+00:00";
 CREATE TABLE `akun` (
   `id` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `passwords` varchar(255) NOT NULL
+  `passwords` varchar(255) NOT NULL,
+  `username` varchar(100) DEFAULT NULL,
+  `akses` int(1) DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `akun`
 --
 
-INSERT INTO `akun` (`id`, `email`, `passwords`) VALUES
-(1, 'admin', 'admin'),
-(2, 'anta@gmail.com', 'anta'),
-(3, 'antaa@gmail.com', 'antaa');
+INSERT INTO `akun` (`id`, `email`, `passwords`, `username`, `akses`) VALUES
+(1, 'admin', 'admin', 'Admint', 1),
+(2, 'anta@gmail.com', 'anta', 'Tna', 2),
+(3, 'antaa@gmail.com', 'antaa', 'TNAAAAAAAAAA', 2);
 
 -- --------------------------------------------------------
 
@@ -53,19 +55,21 @@ CREATE TABLE `game` (
   `genreID` int(11) DEFAULT NULL,
   `platformID` int(11) DEFAULT NULL,
   `nama` varchar(255) NOT NULL,
-  `deskripsi` varchar(1000) DEFAULT NULL
+  `deskripsi` varchar(1000) DEFAULT 'Wutdehel',
+  `rating` int(1) DEFAULT 0,
+  `komentar` varchar(5000) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `game`
 --
 
-INSERT INTO `game` (`gameID`, `genreID`, `platformID`, `nama`, `deskripsi`) VALUES
-(1, 12, 1, 'Valorant', 'Game Shooter'),
-(2, 14, 2, 'Zero To Hero', 'AFK RPG gaem pH'),
-(3, 10, 3, 'Terraria', 'Game Sandbox'),
-(4, 1, 1, 'Devil May Gyat', 'Wla Wla Wla Plap'),
-(5, 1, 1, 'Edging Empire', 'You play as Sigma Empire where you try to rizz the minors to win the game!');
+INSERT INTO `game` (`gameID`, `genreID`, `platformID`, `nama`, `deskripsi`, `rating`, `komentar`) VALUES
+(1, 12, 1, 'Valorant', 'Game Shooter', 0, 'WwutDehaeil'),
+(2, 14, 2, 'Zero To Hero', 'AFK RPG gaem pH', 0, 'wutdeheali'),
+(3, 10, 3, 'Terraria', 'Game Sandbox', 0, 'wuWT'),
+(4, 1, 1, 'Devil May Gyat', 'Wla Wla Wla Plap', 0, 'Wad'),
+(5, 1, 1, 'Edging Empire', 'You play as Sigma Empire where you try to rizz the minors to win the game!', 0, 'Woakwoa');
 
 -- --------------------------------------------------------
 
