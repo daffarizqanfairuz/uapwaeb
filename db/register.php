@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($conn->query($sql1) === TRUE) {
             $userid = $conn->insert_id;
             $conn->commit();
-            header("Location: ../login.php");
+            header("Location: ../ui/login.html");
             exit();
 
         } else {
