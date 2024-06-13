@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 12, 2024 at 07:54 PM
+-- Generation Time: Jun 13, 2024 at 04:51 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -40,9 +40,10 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`id`, `email`, `passwords`, `username`, `akses`) VALUES
-(1, 'admin', 'admin', 'Admint', 1),
-(2, 'anta@gmail.com', 'anta', 'Tna', 2),
-(3, 'antaa@gmail.com', 'antaa', 'TNAAAAAAAAAA', 2);
+(1, 'admin', 'admin', 'admin', 1),
+(2, 'anta@gmail.com', 'anta', 'TNA', 2),
+(3, 'antaa@gmail.com', 'antaa', 'tnaaa', 2),
+(4, 'daoa@gmail.com', 'wla', 'daoa@gmail.com', 2);
 
 -- --------------------------------------------------------
 
@@ -68,8 +69,9 @@ INSERT INTO `game` (`gameID`, `genreID`, `platformID`, `nama`, `deskripsi`, `rat
 (1, 12, 1, 'Valorant', 'Game Shooter', 0, 'WwutDehaeil'),
 (2, 14, 2, 'Zero To Hero', 'AFK RPG gaem pH', 0, 'wutdeheali'),
 (3, 10, 3, 'Terraria', 'Game Sandbox', 0, 'wuWT'),
-(4, 1, 1, 'Devil May Gyat', 'Wla Wla Wla Plap', 0, 'Wad'),
-(5, 1, 1, 'Edging Empire', 'You play as Sigma Empire where you try to rizz the minors to win the game!', 0, 'Woakwoa');
+(4, 1, 1, 'Devil May Gyat', 'Wla Wla Wla Plap', 4, 'Jadi game ini tentang gyat the gamers dimana dante tidak bisa menjadi sigma skibi.'),
+(5, 1, 1, 'Edging Empire', 'You play as Sigma Empire where you try to rizz the minors to win the game!', 0, 'Woakwoa'),
+(7, 1, 2, 'Sigma Skibi Toilet', 'Alamak', 5, 'Alamak');
 
 -- --------------------------------------------------------
 
@@ -153,19 +155,19 @@ ALTER TABLE `platform`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `game`
 --
 ALTER TABLE `game`
-  MODIFY `gameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `gameID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `genre`
 --
 ALTER TABLE `genre`
-  MODIFY `genreID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `genreID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `platform`
