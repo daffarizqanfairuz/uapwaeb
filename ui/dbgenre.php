@@ -40,7 +40,7 @@ include '../db/koneksi.php';
                         echo "<td>".$genreRow['genreID']."</td>";
                         echo "<td>".$genreRow['nama']."</td>";
                         echo '<td><div class="d-grid gap-2 d-md-block">
-                                <a class="btn btn-primary wid-25 center textdec-n" type="button" href="dbeditgenre.php?gameID='.$genreRow['genreID'].'">Edit</a>
+                                <a class="btn btn-primary wid-25 center textdec-n" type="button" href="dbeditgenre.php?genreID='.$genreRow['genreID'].'">Edit</a>
                                 <a class="btn btn-primary wid-25 center textdec-n" type="button" href="../db/deletegenre.php?id='.$genreRow['genreID'].'">Delete</a>
                             </div></td>';
                         echo "</tr>";

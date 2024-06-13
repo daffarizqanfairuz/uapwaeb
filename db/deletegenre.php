@@ -6,7 +6,7 @@ $genreid = $_GET['id'];
 $genredel = "DELETE FROM genre WHERE genreid = $genreid";
 $delRes = $conn->query($genredel);
 if ($delRes){
-    echo "Sukses";
+    header("Location: ../ui/dbgenre.php");
 } else {
     echo "error : " . $conn->error;
 }

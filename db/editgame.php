@@ -11,8 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $rating = $_POST['rating'];
 
     $updateSQL = "UPDATE game SET 
-                  platformID = '$platformID', 
-                  genreID = '$genreID', 
+                  platformID = '$platformID',
                   nama = '$nama', 
                   deskripsi = '$deskripsi', 
                   komentar = '$komentar', 
