@@ -23,7 +23,7 @@ include '../db/auth.php';
       </li>
       <?php if($akses === 1): ?>
       <li class="nav-item ">
-          <a class="nav-link" href="">Dashboard</a>
+          <a class="nav-link" href="dashboard.html">Dashboard</a>
       </li>
       <?php endif; ?>
       <li class="nav-item dropdown">
